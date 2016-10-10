@@ -19,6 +19,13 @@ select * from Categorias where Categoria_Up is not null
 
 delete from Categorias where Parent_CategoriaID is not null
 
+create table Libros
+(
+	Titulo		nvarchar(200)	not null,
+	ISBN		nchar(13)		not null
+)
+
+
 /*
 	Consulta con easter-loading para obtener una categoria CON TODAS sus SubCategorias
 	Observar el WHERE con 'Libros' que hay 

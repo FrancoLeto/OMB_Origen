@@ -96,6 +96,7 @@ namespace Servicios
 
       try
       {
+        //  Usamos PBKDF2 para proteger las passwords en la base de datos
         OMBContext.DB.Database.ExecuteSqlCommand("update Usuarios set Password = @p1 where Login = @p0", login, pass);
       }
       catch (Exception ex)
